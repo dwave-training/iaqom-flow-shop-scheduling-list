@@ -2,7 +2,7 @@
   https://img.shields.io/badge/Open%20in%20GitHub%20Codespaces-333?logo=github)](
   https://codespaces.new/dwave-training/iaqom-flow-shop-scheduling-list?quickstart=1)
   
-# Flow Shop Scheduling with the Stride<sup>TM</sup> Hybrid Solver using List Variable
+# Flow Shop Scheduling with the Stride<sup>TM</sup> Hybrid Solver using a List Variable
 
 For the flow shop scheduling problem, convert the mathematical formulation into a model in Python. Use a list variable to represent the decision variable, and formulate the problem so that it is compatible for submission to the Stride hybrid solver.
 
@@ -12,7 +12,7 @@ This problem has the following 4 constraints:
 - All jobs process on machines in the same order.
 - Every job must be processed on every machine. 
 - Each machine can only process one job at a time.
-- Once a job starts, it can't be paused and must be completed.
+- Once a job starts, it cannot be paused and must be completed.
 
 Build the nonlinear model, add the constants to the model, define the decision variable, and set the objective function. Then submit the problem to the Stride hybrid solver to obtain the best solution.
 
@@ -20,16 +20,16 @@ In this exercise, the processing time for 3 jobs on 2 machines are provided as a
 
 ## Exercise
 
-In this exercise, build a nonlinear model that minimizes the makespan. Formulate the problem so that it is compatible with the Stride Hybrid solver, and then submit the model to the solver to obtain the best solution.
+Build a nonlinear model that minimizes the makespan. Formulate the problem so that it is compatible for submission to the Stride Hybrid solver, and then submit the model to the solver to obtain the best solution.
 
 Open the code file `fss_list_submit.py`.
 
    1. Create a nonlinear model object called `model` and import the required package.
 
-   2. Add the constant to the model object.
+   2. Add the problem constant to the model object.
       - Add `processing_times_matrix` to the model object and name it `processing_times`.
    
-   3. Define the list decision variable that represents the order in which the jobs are scheduled and store it in `S`. 
+   3. Define the decision variable as a list symbol that represents the order in which the jobs are scheduled and store it in `S`. 
 
    4. Build the objective expression for the makespan. Loop over the machines using the index `machine_m` and over the positions in the job sequence using the index `k`. For each machine and job position, complete the following steps: 
       - Define the processing time of the current job on the current machine and store it in `process_time`.
@@ -58,7 +58,7 @@ Open the code file `fss_list_submit.py`.
             ```
          - For all the remaining jobs on the remaining machines:
 
-            Define the completion time of the current job. It cannot start until the following conditions are satisfied. The current job has finished processing on the previous machine and the previous job has finished processing on the current machine. Therefore, take the later of these two completion times and add the processing time of the current job.
+            Define the completion time of the current job. The job cannot start until the following conditions are satisfied: the current job has finished processing on the previous machine and the previous job has finished processing on the current machine. Take the later of these two completion times and add the processing time of the current job.
 
             Hint: Import the `maximum` function from `dwave.optimization.mathematical` module.
 
@@ -75,7 +75,7 @@ Open the code file `fss_list_submit.py`.
 
    8. Instantiate the nonlinear sampler and name it `sampler`.
    
-   9. Submit the nonlinear model to the nonlinear sampler. Give this problem a label on your Leap dashboard by using the `label` parameter. Use the label `FSS_List`. Note that this label is case sensitive and uses an underscore.
+   9. Submit the nonlinear model to the Stride hybrid solver. Give this problem a label on your Leap dashboard by using the `label` parameter. Use the label `FSS_List`. Note that this label is case sensitive and uses an underscore.
 
    10. Return the best solution for the list variable symbol and store it in `order_state`.
 

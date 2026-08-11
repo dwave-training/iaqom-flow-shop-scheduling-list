@@ -26,13 +26,13 @@ processing_times_matrix = np.array([[10, 5, 7], [20, 10, 15]])
 # The total number of machines and jobs.
 num_machines, num_jobs = processing_times_matrix.shape
 
-# TODO: Add the constant to the model object.
+# TODO: Add the problem constant to the model object.
 
 
-# TODO: Define the list variable and store it in S.
+# TODO: Define the decision variable as a list variable and store it in S.
 
 
-# Build the objective: Minimize the makespan
+# Build the objective: Minimize the makespan.
 
 # Create an empty end times list
 end_times = []
@@ -69,7 +69,7 @@ for machine_m in range(num_machines):
 
             # TODO: For the remaining jobs on the remaining machines:
             
-                # TODO: Define the completion time of the current job. It cannot start until the following conditions are satisfied. The current job has finished processing on the previous machine and the previous job has finished on the current machine.
+                # TODO: Define the completion time of the current job. The job cannot start until the following conditions are satisfied: the current job has finished processing on the previous machine and the previous job has finished on the current machine.
                 # Add the processing time to the later of these two completion times and store the result in completion_time.
                 # Hint: Import the maximum function from dwave.optimization.mathematical module.
                 
