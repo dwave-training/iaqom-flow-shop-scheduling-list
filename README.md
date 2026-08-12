@@ -24,14 +24,16 @@ Build a nonlinear model that minimizes the makespan. Formulate the problem so th
 
 Open the code file `fss_list_submit.py`.
 
-   1. Create a nonlinear model object called `model` and import the required package.
+   1. Import the relevant package(s).
 
-   2. Add the problem constant to the model object.
+   2. Create a nonlinear model object called `model`.
+
+   3. Add the problem constant to the model object.
       - Add `processing_times_matrix` to the model object and name it `processing_times`.
    
-   3. Define the decision variable as a list symbol that represents the order in which the jobs are scheduled and store it in `S`. 
+   4. Define the decision variable as a list symbol that represents the order in which the jobs are scheduled and store it in `S`. 
 
-   4. Build the objective expression for the makespan. Loop over the machines using the index `machine_m` and over the positions in the job sequence using the index `k`. For each machine and job position, complete the following steps: 
+   5. Build the logic required for the objective expression for the makespan. Loop over the machines using the index `machine_m` and over the positions in the job sequence using the index `k`. For each machine and job position, complete the following steps: 
       - Define the processing time of the current job on the current machine and store it in `process_time`.
       ```math
       process\_time = processtime_{machine\_m,S[k]} 
@@ -67,16 +69,16 @@ Open the code file `fss_list_submit.py`.
             ```
       - After calculating the `completion_time` for the current job, append it to the list in `end_times` associated with `machine_m`. 
 
-   5. After exiting both loops, define the makespan as the completion time of the last job on the last machine and store it in `makespan`.
+   6. After exiting both loops, define the makespan as the completion time of the last job on the last machine and store it in `makespan`.
 
-   6. Set the objective function to minimize the `makespan`. 
+   7. Set the objective function to minimize the `makespan`. 
    
-   7. Lock the model explicitly to prevent further changes.
+   8. Lock the model explicitly to prevent further changes.
 
-   8. Instantiate the nonlinear sampler and name it `sampler`.
+   9. Instantiate the nonlinear sampler and name it `sampler`.
    
-   9. Submit the nonlinear model to the Stride hybrid solver. Give this problem a label on your Leap dashboard by using the `label` parameter. Use the label `FSS_List`. Note that this label is case sensitive and uses an underscore.
+   10. Submit the nonlinear model to the Stride hybrid solver. Give this problem a label on your Leap dashboard by using the `label` parameter. Use the label `FSS_List`. Note that this label is case sensitive and uses an underscore.
 
-   10. Return the best solution for the list variable symbol and store it in `order_state`.
+   11. Return the best solution for the list variable symbol and store it in `order_state`.
 
-   11. Return the objective value of the best solution and store it in `objective_value`.
+   12. Return the objective value of the best solution and store it in `objective_value`.

@@ -32,7 +32,7 @@ num_machines, num_jobs = processing_times_matrix.shape
 # TODO: Define the decision variable as a list variable and store it in S.
 
 
-# Build the objective: Minimize the makespan.
+# Build the logic required for the objective: Minimize the makespan.
 
 # Create an empty end times list
 end_times = []
@@ -89,7 +89,7 @@ for machine_m in range(num_machines):
 # TODO: Instantiate the nonlinear sampler and name it sampler.
 
 
-# TODO: Submit the nonlinear model to the nonlinear sampler. Use the label 'FSS_List', which is case sensitive and uses an underscore.
+# TODO: Submit the nonlinear model to the Stride hybrid solver. Use the label 'FSS_List', which is case sensitive and uses an underscore.
 
 
 # Process and print solution
