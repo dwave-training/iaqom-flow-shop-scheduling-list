@@ -22,7 +22,7 @@ In this exercise, the processing time for 3 jobs on 2 machines are provided as a
 
 Build a nonlinear model that minimizes the makespan. Formulate the problem so that it is compatible for submission to the Stride Hybrid solver, and then submit the model to the solver to obtain the best solution.
 
-Open the code file `fss_list_submit.py`.
+Open `fss_list_submit.py`.
 
    1. Import the relevant package(s).
 
