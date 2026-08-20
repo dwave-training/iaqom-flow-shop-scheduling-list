@@ -2,7 +2,7 @@
   https://img.shields.io/badge/Open%20in%20GitHub%20Codespaces-333?logo=github)](
   https://codespaces.new/dwave-training/iaqom-flow-shop-scheduling-list?quickstart=1)
   
-# Flow Shop Scheduling with the Stride<sup>TM</sup> Hybrid Solver using a List Variable
+# Flow Shop Scheduling With the Stride<sup>TM</sup> Hybrid Solver Using a List Variable
 
 For the flow shop scheduling problem, convert the mathematical formulation into a model in Python. Use a list variable to represent the decision variable, and formulate the problem so that it is compatible for submission to the Stride hybrid solver.
 
@@ -77,7 +77,7 @@ Open `fss_list_submit.py`.
 
    9. Instantiate the nonlinear sampler and name it `sampler`.
    
-   10. Submit the nonlinear model to the Stride hybrid solver. Give this problem a label on your Leap dashboard by using the `label` parameter. Use the label `FSS_List`. Note that this label is case sensitive and uses an underscore.
+   10. Submit the nonlinear model to the Stride hybrid solver. Label your problem “FSS_List" using the `label` parameter. This label will show in your Leap dashboard when you submit your problem. Note that this label is case sensitive and uses an underscore.
 
    11. Return the best solution for the list variable symbol and store it in `order_state`.
 
