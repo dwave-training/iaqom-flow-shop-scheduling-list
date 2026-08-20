@@ -6,10 +6,10 @@
 
 For the flow shop scheduling problem, convert the mathematical formulation into a model in Python. Use a list variable to represent the decision variable, and formulate the problem so that it is compatible for submission to the Stride hybrid solver.
 
-The objective is to minimize the makespan, which is the period starting with the first job on the first machine and ending with the completion of the last job on the last machine. The decision variable represents the order in which the jobs are scheduled. 
+The objective is to minimize the makespan, which is the period starting with the start time of the first job on the first machine and ending with the completion time of the last job on the last machine. The decision variable represents the order in which the jobs are scheduled. 
 
 This problem has the following 4 constraints:
-- All jobs process on machines in the same order.
+- All jobs must be processed on all machines in the same order.
 - Every job must be processed on every machine. 
 - Each machine can only process one job at a time.
 - Once a job starts, it cannot be paused and must be completed.
