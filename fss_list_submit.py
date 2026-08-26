@@ -85,7 +85,7 @@ for machine_m in range(num_machines):
 #TODO: Define the makespan (the time at which the last job finishes processing on the last machine) and store it in `makespan`.
 
 
-#TODO: Set the objective function: Minimize the `makespan`.
+#TODO: Set the objective function: Minimize the makespan.
 
 
 #TODO: Lock the model explicitly to prevent changes.
