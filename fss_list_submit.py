@@ -12,7 +12,7 @@ Given constants:
     num_jobs (int): Number of jobs.
 """
 
-#TODO: Import any required packages.
+# TODO: Import any required packages.
 import numpy as np
 
 
@@ -75,7 +75,7 @@ for machine_m in range(num_machines):
             
                 #TODO: Define the completion time of the current job. The job cannot start until the following conditions
                 # are satisfied: the current job has finished processing on the previous machine and the previous job has finished on the current machine.
-                # Add the processing time to the later of these two completion times and store the result in completion_time.
+                # Add the processing time to the later of these two completion times and store the result in `completion_time`.
                 # Hint: Import the `maximum` function from `dwave.optimization.mathematical` module.
                 
 
