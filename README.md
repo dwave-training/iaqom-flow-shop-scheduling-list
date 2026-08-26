@@ -70,7 +70,7 @@ In `fss_list_submit.py`, do the following:
 
    6. After exiting both loops, define the makespan as the completion time of the last job on the last machine and store it in `makespan`.
 
-   7. Set the objective function to minimize the `makespan`. 
+   7. Set the objective function to minimize `makespan`. 
    
    8. Lock the model explicitly to prevent further changes.
 
