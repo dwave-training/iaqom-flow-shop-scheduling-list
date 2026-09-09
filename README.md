@@ -2,7 +2,7 @@
   https://img.shields.io/badge/Open%20in%20GitHub%20Codespaces-333?logo=github)](
   https://codespaces.new/dwave-training/iaqom-flow-shop-scheduling-list?quickstart=1)
   
-# Flow Shop Scheduling With The Stride<sup>TM</sup> Hybrid Solver Using A List Variable
+# Flow Shop Scheduling With the Stride<sup>TM</sup> Hybrid Solver Using a List Variable
 
 For the flow shop scheduling problem, convert the mathematical formulation into a model in Python. Use a list variable to represent the decision variable, and formulate the problem so that it is compatible for submission to the Stride hybrid solver.
 
