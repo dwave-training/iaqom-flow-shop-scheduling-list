@@ -54,7 +54,7 @@ for machine_m in range(num_machines):
         if machine_m == 0:
             # For the first job on the first machine:
             if k == 0:
-                #TODO: Set the completion time of the current job equal to its processing time and store it in `completion_time`.
+                # TODO: Set the completion time of the current job equal to its processing time and store it in `completion_time`.
                 
 
             # For all the remaining jobs on the first machine:
